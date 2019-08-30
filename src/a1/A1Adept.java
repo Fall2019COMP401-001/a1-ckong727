@@ -35,17 +35,19 @@ public class A1Adept {
 				}
 			}
 		}
+	
 		scan.close();
 		int maxCustomer = 0;
 		int minCustomer = 0;
-		double comparePrice = customerTotal[0];
 		for (int p = 0; p < customerTotal.length; p++) {
 			netPrice += customerTotal[p];
+			double comparePrice = customerTotal[0];
 			if (customerTotal[p] > comparePrice) {
 				maxCustomer = p;
 				comparePrice = customerTotal[p];
+				System.out.println(firstName[p] + " " + lastName[p] + " " + customerTotal[p]);
 			}
-			else if(customerTotal[p] < comparePrice) {
+			if(customerTotal[p] < comparePrice) {
 				minCustomer = p;
 				comparePrice = customerTotal[p];
 			}
