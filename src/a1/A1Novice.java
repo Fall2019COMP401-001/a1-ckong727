@@ -9,7 +9,7 @@ public class A1Novice {
 		Scanner scan = new Scanner(System.in);
 
 		// Your code follows here.
-		/* Initializes the length of the following arrays after providing# of customers. 
+		/* Initializes the length of the following arrays after providing # of customers. 
 		 * Input: Non-negative integer
 		 * Output: customerCount[], totalPrice[], firstName[], lastName[]
 		 */
