@@ -22,6 +22,7 @@ public class A1Novice {
 		/* Totals each customer's price.
 		 * Input: Non-null string, non-null string, non-negative integer
 		 * Output: firstName[], lastName[], totalPrice[]
+		 * 
 		 */
 		for (int i = 0; i<customerCount.length; i++) {
 			firstName[i] = scan.next();
