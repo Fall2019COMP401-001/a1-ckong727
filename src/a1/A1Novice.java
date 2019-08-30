@@ -45,7 +45,7 @@ public class A1Novice {
 		 * Output: 3 void strings consisting of first initial of first name, last name, and respective total to two decmial places
 		 */
 		for (int k = 0; k < customerCount.length; k++) {
-			System.out.println(firstName[k].charAt(0) + ". " + lastName[k] + " :" + String.format("%.2f", totalPrice[k]));
-		}
+			System.out.println(firstName[k].charAt(0) + ". " + lastName[k] + ": " + String.format("%.2f", totalPrice[k]));
+		} 
 	}
 }
