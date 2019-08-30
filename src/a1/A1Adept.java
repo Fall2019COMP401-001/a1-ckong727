@@ -38,6 +38,7 @@ public class A1Adept {
 				}
 			}
 		}
+<<<<<<< HEAD
 	
 		scan.close();
 		int maxCustomer = 0;
@@ -51,6 +52,19 @@ public class A1Adept {
 				System.out.println(firstName[p] + " " + lastName[p] + " " + customerTotal[p]);
 			}
 			if(customerTotal[p] < comparePrice) {
+=======
+		scan.close();
+		int maxCustomer = 0;
+		int minCustomer = 0;
+		double comparePrice = customerTotal[0];
+		for (int p = 0; p < customerTotal.length; p++) {
+			netPrice += customerTotal[p];
+			if (customerTotal[p] > comparePrice) {
+				maxCustomer = p;
+				comparePrice = customerTotal[p];
+			}
+			else if(customerTotal[p] < comparePrice) {
+>>>>>>> branch 'master' of https://github.com/Fall2019COMP401-001/a1-ckong727.git
 				minCustomer = p;
 				comparePrice = customerTotal[p];
 			}
