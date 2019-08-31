@@ -46,11 +46,9 @@ public class A1Adept {
 		double minComparePrice = customerTotal[0];
 		for (int p = 0; p < customerTotal.length; p++) {
 			netPrice += customerTotal[p];
-			System.out.println(customerTotal[p] + "     max " + maxCustomer + "   min " + minCustomer);
 			if (maxComparePrice > customerTotal[p]) {
 				maxCustomer = p;
 				maxComparePrice = customerTotal[p];
-				System.out.println(firstName[p] + " " + lastName[p] + " " + customerTotal[p]);
 			}			
 			else if(minComparePrice < customerTotal[p]) {
 				minCustomer = p;
