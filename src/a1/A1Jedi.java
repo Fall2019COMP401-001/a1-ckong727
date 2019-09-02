@@ -16,6 +16,7 @@ public class A1Jedi {
 			itemName[i] = scan.next();
 			double price = scan.nextDouble();
 		}
+		
 		int[] numCustomer = new int[scan.nextInt()];
 		String[] firstName = new String[numCustomer.length];
 		String[] lastName = new String[numCustomer.length];
@@ -25,8 +26,7 @@ public class A1Jedi {
 			lastName[i] = scan.next();
 			int itemCount = scan.nextInt();
 			String[] individualCart = new String[itemCount];
-			for (int j = 0; j < itemCount; j++ )
-			{
+			for (int j = 0; j < itemCount; j++ ) {
 				int multiplier = scan.nextInt();
 				String testName = scan.next();
 				individualCart[j] = testName;
@@ -35,16 +35,23 @@ public class A1Jedi {
 					if (testName.equalsIgnoreCase(itemName[n])) {
 						itemAmount[n] += multiplier;
 							itemCheck[n]++;
-						for (int k = 0; k < j; k++) {
-							if(individualCart[k].equalsIgnoreCase(testName)) {
-						itemCheck[n]--;
-					}
-						}
-					}
+							
+								for (int k = 0; k < j; k++) {
+									if(individualCart[k].equalsIgnoreCase(testName)) {
+										itemCheck[n]--;
+									}
+									if (k == j - 1 ) {
+										if (testCustomer(individualCart)){
+											itemCheck[n]++;
+										}
+									}
+								}
+		
+					}	
 				}
-				
 			}
 		}
+		
 		for (int p = 0;  p < itemAmount.length; p++){
 			if (itemCheck[p] == 0) {
 				System.out.println("No customers bought " + itemName[p]);
@@ -54,4 +61,20 @@ public class A1Jedi {
 			}
 		}
 	}
+	static boolean testCustomer(String[] individualCart) {
+		int k = 0;
+		boolean customerTest = true;
+		while (k < individualCart.length && customerTest) {
+			if (individualCart[0].equalsIgnoreCase(individualCart[k])){
+				k++;
+				customerTest = true;
+			}
+			else {
+				k++;
+				customerTest = false;
+			}
+		}
+		return customerTest;
+	}
 }
+
